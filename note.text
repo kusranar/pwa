@@ -1,0 +1,32 @@
+MANIFEST
+you can pass some extra information to the browser, and browser display some things about your application differently.
+and the browser depending on which operating system its running on can even allow your app to install itself on the home screen of your user.
+
+CONTENT OF MANIFEST
+"name": "Sweaty - Activity Tracker" // long name of app (e.g. on Splashscreen)
+"short_name": "Sweaty" // short name of app (e.g. below icon)
+"start_url": "/index.html" // which page to load on start up
+"scope": "." // which pages are includeed in "PWA Experience", dot simply means all the pages in our web folder. so in the public folder here are included.
+                if we would only specify a subfolder lets say the help folder. that would mean that for every other page that browser will not use the settings we set up here in the json file.
+"display": "standalone" // should it look like a standalone app, or fullscreen like native app, minimal-ui, browser
+"background_color": "#fff" // background whilst loading & on Splashscreen 
+"theme_color": "#351b5"  // theme color (e.g. on top bar in task switcher)
+"description": "keep running until your super sweaty!" // description (e.g. as favorite)
+"dir": "ltr" // read direction of your app
+"lang" "en-US" // main language of app
+"orientation": "portrait-primary" // set (and enforce) default orientation
+"icons": [...] // configure icons (e.g. on homescreen) 48x48 96x96 128x128 512x512
+                [
+                    {
+                        "src": "/src/images/icons/app-icon-48x48.png",
+                        "type": "image/png",
+                        "size": "48x48"
+                    }
+                ]
+"related_applications" : [
+    {
+        "platform": "play",
+        "url": "https://play.google.com",
+        "id": "com.example.app1"
+    }
+]
