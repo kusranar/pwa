@@ -81,3 +81,43 @@ nothing we can do, if the server doesn't set this, we can't enforce it. Some ser
 which basically means if you were accessing the data from a different origin and the URL the server
 
 is running on, you're not allowed to read the content of the response.
+
+
+=====
+
+Now there is one thing in the head section I also want to outline, besides all our icons here and so
+
+on,
+
+there's this meta tag here where we set the viewport.
+
+Now here I actually use a relatively default set up where I set the width to the device width and then I also set
+
+something which is not seen in every application.
+
+Now by sitting width equal to device width, we ensure that we actually scale this application correctly
+
+to the different device widths, so that you don't get the look of opening a desktop page on a mobile device
+
+but instead that we enforce the mobile device boundaries to the application and hence enter the responsive
+
+mode we configured with media queries and so on. The users scalable set up here makes sure that the
+
+user can't pinch and zoom in our application.
+
+Now you can discuss this controversially because you kind of make your application a little bit less
+
+accessible because people can't zoom in, on the other hand, you really get a mobile app-like feeling if you
+
+have like application where you can't zoom out and in.
+
+Responsive Design Basics by Google: https://developers.google.com/web/fundamentals/design-and-ui/responsive/
+Responsive Design Patterns (Google): https://developers.google.com/web/fundamentals/design-and-ui/responsive/patterns
+Responsive Images (Google): https://developers.google.com/web/fundamentals/design-and-ui/responsive/images
+Using CSS Media Queries: https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries
+Responsive Images (MDN): https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+Responsive Images in CSS: https://css-tricks.com/responsive-images-css/
+Using CSS Animations: http://learn.shayhowe.com/advanced-html-css/transitions-animations/
+
+=====
+
