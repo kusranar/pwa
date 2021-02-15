@@ -8,7 +8,7 @@ CONTENT OF MANIFEST
 "start_url": "/index.html" // which page to load on start up
 "scope": "." // which pages are includeed in "PWA Experience", dot simply means all the pages in our web folder. so in the public folder here are included.
                 if we would only specify a subfolder lets say the help folder. that would mean that for every other page that browser will not use the settings we set up here in the json file.
-"display": "standalone" // should it look like a standalone app, or fullscreen like native app, minimal-ui, browser
+"display": "standalone" // should it look like a standalone app(dont see the browser controls at the top or url bar), or fullscreen like native app, minimal-ui, browser
 "background_color": "#fff" // background whilst loading & on Splashscreen 
 "theme_color": "#351b5"  // theme color (e.g. on top bar in task switcher)
 "description": "keep running until your super sweaty!" // description (e.g. as favorite)
@@ -31,9 +31,13 @@ CONTENT OF MANIFEST
     }
 ]
 
+https://developers.google.com/web/fundamentals/app-install-banners/native
+
 =====
 
 FAQ SERVICE WORKERS
+https://jakearchibald.github.io/isserviceworkerready/#moar
+https://web.dev/customize-install/
 Is the Service Worker installed everytime I refresh the page?
 
 No, whilst the browser does of course (naturally) execute the register()  code everytime you refresh the page, it won't install the service worker if the service worker file hasn't changed. If it only changed by 1 byte though, it'll install it as a new service worker (but wait with the activation as explained).
@@ -67,3 +71,13 @@ This is actually not Service Worker specific, it applies to all Web Workers.
 What's the difference between Web Workers and Service Workers?
 
 Service Workers are a special type of Web Workers. Web Workers also run on a background thread, decoupled from the DOM. They don't keep on living after the page is closed though. The Service Worker on the other hand, keeps on running (depending on the operating system) and also is decoupled from an individual page. 
+
+====
+
+CORS is set by the server,
+
+nothing we can do, if the server doesn't set this, we can't enforce it. Some servers don't set these headers
+
+which basically means if you were accessing the data from a different origin and the URL the server
+
+is running on, you're not allowed to read the content of the response.
