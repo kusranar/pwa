@@ -121,3 +121,35 @@ Using CSS Animations: http://learn.shayhowe.com/advanced-html-css/transitions-an
 
 =====
 
+firebase 
+subscriptions {
+    -MTnitofeuyZmWwEdio0 {
+        // incorporate out vapid public key information
+
+        // google server endpoint for chrome
+        endpoint: "https://fcm.googleapis.com/fcm/send/cc1EbgQ22lQ..."
+        keys {
+            auth: "NXYBVkJDba78o9Gx904a8A",
+            p256dh: "BAp_luf05PuG92SLjujfTvkxHul1DiliJexl26oFzIXokeR..."
+        }
+    }
+}
+
+I always emphasize that the subscription refers to a browser on the device and this is true.
+It also refers to a given service worker there because as you saw when we set up the subscription, we
+set it up through the service worker.
+Now if we go to our client application, to the applications tab and click clear site data, we also get
+rid of the service worker, at least if we have unregistered servers workers ticked here
+and then also get rid of our existing subscriptions.
+Of course not on the server because we don't reach out to the server to clear them here.
+We better would do that though because these subscriptions on the server won't work anymore if we unregister
+the service worker, if we just update it by simply adding code to the service worker, reloading the page,
+closing the tab and opening a new one,
+so this normal update procedure,
+it won't be a problem because there, we won't re-install a completely new one but if we unregister a
+service worker, we render all existing subscriptions useless.
+So use this with care, that's something you definitely have to keep in mind.
+Keep your service worker registered, update it,
+whatever you need to do
+but if you unregister it, also make sure to clear up your subscriptions on the server because they will
+no longer be valid.
