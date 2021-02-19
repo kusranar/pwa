@@ -153,3 +153,12 @@ Keep your service worker registered, update it,
 whatever you need to do
 but if you unregister it, also make sure to clear up your subscriptions on the server because they will
 no longer be valid.
+
+
+======
+
+We'll have a look at workbox a tool by Google which makes managing your service worker easier and
+
+way more automatic.
+
+You'll learn how to use it how to use its more advanced features like routing or request parsing.
