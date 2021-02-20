@@ -1,0 +1,11 @@
+    "generate-sw": "workbox generate:sw"
+in package.json, we use the generate-sw command to generate a brand new service worker, that worked great and 
+it analyzed all our files and added them automatically for precaching.
+Now if we want to build up on an existing service worker file as we do here, we can't use that because
+generate-sw will always generate a brand new file which only does precaching.
+
+    "generate-sw": "workbox inject:manifest"
+This basically means take an existing file, analyze all my assets and create this manifest you generate here already,
+so take this array (service-worker file, variable fileManifest) and then inject it into my manually created file.
+Now of course for this to work, we have to give workbox some additional information.
+    
